@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply font-body text-base font-normal mx-auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1440px;
+    line-height: 1.5;
+  }
+  input {
+    @apply outline-none;
+  }
+  input:focus + .error-input {
+    display: none;
+  }
+}
+.quill {
+  padding: 15px 25px;
+  border: 1px solid #f1f1f3;
+  border-radius: 10px;
+  .ql-toolbar.ql-snow {
+    border: none;
+    background: none;
+    @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 inline-block;
+  }
+  .ql-toolbar.ql-snow,
+  .ql-editor {
+    @apply border-none font-body text-sm;
+  }
+  .ql-editor {
+    @apply pt-10;
+  }
+  .ql-editor.ql-blank::before {
+    font-style: normal;
+    @apply text-sm font-normal;
+  }
+  .ql-container.ql-snow {
+    border: none;
+  }
+}
+
+.shadow-1 {
+  box-shadow: -4px 4px 8px rgba(226, 226, 226, 0.2),
+    4px 4px 8px rgba(226, 226, 226, 0.2);
+}
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+// custom datepicker
+body .react-datetime-picker {
+  @apply py-4 px-6
+  h-[54px] w-full border border-StrockColor bg-transparent rounded-xl placeholder:text-text4 dark:placeholder:text-text2 dark:text-white font-medium text-sm text-text1   dark:border-darkStroke;
+  .react-datetime-picker__wrapper {
+    @apply border-none;
+  }
+  .react-datetime-picker__clear-button {
+    display: none;
+  }
+  .react-datetime-picker__wrapper {
+    @apply flex items-center;
+  }
+  .react-calendar__tile--active,
+  .react-calendar__tile--active:hover {
+    @apply bg-primary text-white;
+  }
+  .react-calendar__tile:not(.react-calendar__tile--active):enabled:hover {
+    @apply bg-transparent text-primary;
+  }
+}
