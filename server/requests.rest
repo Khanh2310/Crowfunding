@@ -6,7 +6,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-  "username": "evondev"
+  "username": "quocbao"
 }
 
 
@@ -27,6 +27,6 @@ POST http://localhost:5000/register
 Content-Type: application/json
 
 {
-  "username": "evondev",
-  "password": "evondev"
+  "username": "quocbao",
+  "password": "quocbao"
 }
